@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/main/css/register.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Passion+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oxygen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row main">
+        <div class="main-login main-center">
+          <h2><b> Register Here </b></h2>
+          <form action="register.php" method="post" autocomplete="off">
+            <div class="form-group">
+              <label for="name" class="cols-sm-2 control-label"
+                >Your Name</label
+              >
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"
+                    ><i class="fa fa-user fa" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="fullname"
+                    id="fullname"
+                    placeholder="Enter your Name"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="cols-sm-2 control-label"
+                >Your Email</label
+              >
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"
+                    ><i class="fa fa-envelope fa" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your Email"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="username" class="cols-sm-2 control-label"
+                >Username</label
+              >
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"
+                    ><i class="fa fa-users fa" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    id="username"
+                    placeholder="Enter your Username"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="cols-sm-2 control-label"
+                >Password</label
+              >
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"
+                    ><i class="fa fa-lock fa-lg" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    placeholder="Password"
+                    id="password"
+                    required
+                    placeholder="Enter your Password"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="submit"
+                onclick="validateForm()"
+                value="Register"
+                class="form-control btn btn-primary"
+                name=""
+              />
+            </div>
+          </form>
+        </div>
+        <br />
+        <div class="image">
+          <img
+            src="data:image/jpeg;base64,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"
+            class="profile_image"
+            alt=""
+            style="width: 550px; height: 400px"
+          />
+        </div>
+      </div>
+      <div class="image">
+        <img src="static\bg.jpg" class="profile_image" alt="" />
+      </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+      function validateForm() {
+        var returnval = true;
+
+        var name = document.getElementById("fullname").value;
+        if (name.length < 5) {
+          alert("Length of name is too short");
+          returnval = false;
+        }
+        if (name.length == 0) {
+          alert("Length of name cannot be zero");
+          returnval = false;
+        }
+
+        var password = document.getElementById("password").value;
+        if (password.length < 6) {
+          alert("Password should be atleast 6 charactes long!");
+          returnval = false;
+        }
+
+        return returnval;
+      }
+    </script>
+  </body>
+</html>

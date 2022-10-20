@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main/css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="login-box">
+      <div class="myform">
+        <form class="form-group" action="login.php" method="post">
+          <h2>LOGIN</h2>
+          <label>Username</label>
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            placeholder="Username"
+            id="username"
+            required
+          />
+          <label>Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Password"
+            id="password"
+            required
+          />
+
+          <input
+            type="submit"
+            value="Login"
+            class="form-control btn btn-success"
+            name=""
+          />
+        </form>
+
+        <p>No account <a href="main/register.html">Register</a></p>
+      </div>
+      <div class="image">
+        <img
+          src="main/css/Icon.jpeg"
+          class="profile_image"
+          alt=""
+          style="width: 400px; height: 400px"
+        />
+      </div>
+    </div>
+  </body>
+</html>
